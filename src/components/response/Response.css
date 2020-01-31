@@ -1,6 +1,7 @@
 .ShowResult {
     background: #232323;
     padding: 16px;
-    border: 1px solid rgb(204, 204, 204);
-    height: 400px;
+    border: none;
+    width: 98%;
+    height: 191%;
 }

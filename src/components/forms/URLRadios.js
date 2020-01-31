@@ -4,7 +4,7 @@ import styles from './URLRadios.css';
 
 const URLRadios = ({ onClick }) => (
   <div className={styles.URLRadios}>
-    <div className={styles.Labels}>
+    <div>
       <label htmlFor="get">GET</label>
       <label htmlFor="post">POST</label>
       <label htmlFor="put">PUT</label>
