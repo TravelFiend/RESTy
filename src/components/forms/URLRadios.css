@@ -1,16 +1,19 @@
 .URLRadios {
-    display: flex;
+  display: flex;
 
-    div {
-        label {
-            margin: 23px;
-        }
+  div {
+    label {
+      padding: 4px 23px;
     }
 
-    span {
-        background: none;
+    label:hover {
+      background: rgb(220, 220, 220);
     }
-    
+  }
+
+  span {
+    background: none;
+  }
 }
 
 .Radios {

@@ -5,10 +5,21 @@ import ResponseField from '../components/response/ResponseField';
 import styles from './RESTy.css';
 
 class RESTy extends Component {
-  handleClick = () => console.log('BluEbErrIeS');
+  state = {
+    url: '',
+    method: ''
+
+  }
+
+  handleClick = ({ target }) => {
+    return this.setState(prevState => ({
+      ...prevState, 
+      method: target.name 
+    }));
+  };
   
-  handleChange = () => {
-    console.log('ChiCkEn oF the SeA');
+  handleChange = ({ target }) => {
+    return this.setState({ url: target.value });
   }
 
   handleSubmit = event => {
