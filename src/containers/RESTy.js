@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Form from '../components/forms/Form';
+import History from '../components/history/History';
 import ResponseField from '../components/response/ResponseField';
+import styles from './RESTy.css';
 
 class RESTy extends Component {
   handleClick = () => console.log('BluEbErrIeS');
@@ -17,10 +19,13 @@ class RESTy extends Component {
 
   render() {
     return (
-      <>
-        <Form onSubmit={this.handleSubmit} onChange={this.handleChange} onClick={this.handleClick} />
-        <ResponseField />
-      </>
+      <div className={styles.Container}>
+        <History />
+        <div>
+          <Form onSubmit={this.handleSubmit} onChange={this.handleChange} onClick={this.handleClick} />
+          <ResponseField />
+        </div>
+      </div>
     );
   }
 }
