@@ -13,7 +13,7 @@ class RESTy extends Component {
     token: '',
     json: '',
     method: '',
-    response: ''
+    response: []
   }
 
   handleClick = ({ target }) => {
@@ -47,8 +47,8 @@ class RESTy extends Component {
       <div className={styles.Container}>
         <History />
         <div>
-          <Form onSubmit={this.handleSubmit} onChange={this.handleChange} onClick={this.handleClick} />
-          <ResponseField />
+          <Form onSubmit={this.handleSubmit} onChange={this.handleChange} onClick={this.handleClick} response={this.response} />
+          <ResponseField response={this.state.response} />
         </div>
       </div>
     );
