@@ -3,6 +3,7 @@ import Form from '../components/forms/Form';
 import History from '../components/history/History';
 import ResponseField from '../components/response/ResponseField';
 import styles from './RESTy.css';
+import getResponse from '../services/getResponse';
 
 class RESTy extends Component {
   state = {
@@ -11,7 +12,8 @@ class RESTy extends Component {
     password: '',
     token: '',
     json: '',
-    method: ''
+    method: '',
+    response: ''
   }
 
   handleClick = ({ target }) => {
@@ -25,10 +27,19 @@ class RESTy extends Component {
     return this.setState({ [target.name]: target.value });
   }
 
+  componentDidMount() {
+    this.fetch();
+  }
+
+  fetch = () => {
+    return getResponse(this.state.url)
+      .then(response => this.setState({ response }));
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
-    console.log('OragUTans');
+    this.fetch();
   }
 
   render() {
