@@ -7,8 +7,11 @@ import styles from './RESTy.css';
 class RESTy extends Component {
   state = {
     url: '',
+    username: '',
+    password: '',
+    token: '',
+    json: '',
     method: ''
-
   }
 
   handleClick = ({ target }) => {
@@ -19,7 +22,7 @@ class RESTy extends Component {
   };
   
   handleChange = ({ target }) => {
-    return this.setState({ url: target.value });
+    return this.setState({ [target.name]: target.value });
   }
 
   handleSubmit = event => {

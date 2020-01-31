@@ -8,12 +8,12 @@ const Form = ({ onSubmit, onChange, onClick }) => {
   return (
     <form className={styles.Form} onSubmit={onSubmit}>
       <section>
-        <input className={styles.URL} name="urlSpot" onChange={onChange} placeholder="URL"></input>
+        <input name="url" className={styles.URL} onChange={onChange} placeholder="URL"></input>
         <URLRadios onClick={onClick} />
       </section>
 
       <section className={styles.Bottom}>
-        <textarea onChange={onChange} placeholder="Raw JSON Body"></textarea>
+        <textarea name="json" onChange={onChange} placeholder="Raw JSON Body"></textarea>
         <AuthSection onChange={onChange} />
       </section>
     </form>

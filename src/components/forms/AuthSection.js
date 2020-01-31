@@ -7,11 +7,11 @@ const AuthSection = ({ onChange }) => (
     <button className={styles.Stretch}>Headers</button>
     <p>Basic Authorization</p>
     <div>
-      <input type="text" onChange={onChange} placeholder="Username"></input>
-      <input type="text" onChange={onChange} placeholder="Password"></input>
+      <input name="username" type="text" onChange={onChange} placeholder="Username"></input>
+      <input name="password" type="text" onChange={onChange} placeholder="Password"></input>
     </div>
     <p>Bearer Token</p>
-    <input className={styles.Stretch} type="text" onChange={onChange} placeholder="Bearer Token"></input>
+    <input name="token" className={styles.Stretch} type="text" onChange={onChange} placeholder="Bearer Token"></input>
   </div>
 );
 
