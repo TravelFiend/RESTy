@@ -7,15 +7,8 @@ import styles from './Form.css';
 const Form = ({ onSubmit, onChange, onClick }) => {
   return (
     <form className={styles.Form} onSubmit={onSubmit}>
-      <section>
-        <input name="url" className={styles.URL} onChange={onChange} placeholder="URL"></input>
-        <URLRadios onClick={onClick} />
-      </section>
-
-      <section className={styles.Bottom}>
-        <textarea name="json" onChange={onChange} placeholder="Raw JSON Body"></textarea>
-        <AuthSection onChange={onChange} />
-      </section>
+      <URLRadios onClick={onClick} onChange={onChange} />
+      <AuthSection onChange={onChange} />
     </form>
   );
 };

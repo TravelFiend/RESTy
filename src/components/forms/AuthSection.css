@@ -13,3 +13,8 @@
 .Stretch {
   width: 195%
 }
+
+.Bottom {
+  display: flex;
+  margin-top: 15px;
+}

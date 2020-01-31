@@ -16,6 +16,12 @@
   }
 }
 
+.URL {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 2px;
+}
+
 .Radios {
     display: none;
 }
