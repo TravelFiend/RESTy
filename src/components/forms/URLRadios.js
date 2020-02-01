@@ -15,11 +15,11 @@ const URLRadios = ({ onClick, onChange }) => (
       </div>
 
       <div className={styles.Radios}>
-        <input name="get" type="radio" onClick={onClick} id="get" />
-        <input name="post" type="radio" onClick={onClick} id="post" />
-        <input name="put" type="radio" onClick={onClick} id="put" />
-        <input name="patch" type="radio" onClick={onClick} id="patch" />
-        <input name="delete" type="radio" onClick={onClick} id="delete" />
+        <input name="GET" type="radio" onClick={onClick} id="get" />
+        <input name="POST" type="radio" onClick={onClick} id="post" />
+        <input name="PUT" type="radio" onClick={onClick} id="put" />
+        <input name="PATCH " type="radio" onClick={onClick} id="patch" />
+        <input name="DELETE" type="radio" onClick={onClick} id="delete" />
       </div>
       <button>Go!</button>
     </div>

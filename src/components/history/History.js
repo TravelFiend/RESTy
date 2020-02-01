@@ -1,11 +1,16 @@
 import React from 'react';
-import styles from './History.css';
+import PropTypes from 'prop-types';
 
-const History = () => (
-  <div className={styles.History}>
-    <h2>History</h2>
-    <ul></ul>
-  </div>
+const HistoryItem = ({ method, url }) => (
+  <>
+    <h3>{method}</h3>
+    <p>{url}</p>
+  </>
 );
 
-export default History;
+HistoryItem.propTypes = {
+  method: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
+};
+
+export default HistoryItem;

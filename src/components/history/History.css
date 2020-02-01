@@ -1,7 +1,24 @@
 .History {
-    width: 27vw;
-    background: none;
-    padding: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+  width: 27vw;
+  background: none;
+  padding: 15px 15px 25px 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.Li {
+  color: #eee;
+  background: #2D5986;
+  padding: 4px;
+  margin: 10px 10px 0 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: 12px;
+  border-radius: 3px;
+  border: 1px groove #ccc;
+  overflow: visible;
+
+  p {
+    font-weight: normal;
+  }
 }

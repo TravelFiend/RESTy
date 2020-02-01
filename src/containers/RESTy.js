@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Form from '../components/forms/Form';
-import History from '../components/history/History';
+import HistoryItems from '../components/history/HistoryItems';
 import ResponseField from '../components/response/ResponseField';
 import styles from './RESTy.css';
 import getResponse from '../services/getResponse';
@@ -13,7 +13,8 @@ class RESTy extends Component {
     token: '',
     json: '',
     method: '',
-    response: []
+    response: [],
+    requests: []
   }
 
   handleClick = ({ target }) => {
@@ -40,12 +41,16 @@ class RESTy extends Component {
     event.preventDefault();
 
     this.fetch();
+    return this.setState(prevState => ({
+      ...prevState,
+      requests: [...prevState.requests, { method: this.state.method, url: this.state.url }]
+    }));
   }
 
   render() {
     return (
       <div className={styles.Container}>
-        <History />
+        <HistoryItems history={this.state.requests} />
         <div>
           <Form onSubmit={this.handleSubmit} onChange={this.handleChange} onClick={this.handleClick} response={this.response} />
           <ResponseField response={this.state.response} />
