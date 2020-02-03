@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import History from './History';
+import HistoryItem from './HistoryItem';
 import styles from './History.css';
 
 const HistoryItems = ({ history }) => {
   const historyElements = history.map((histItem, i) => (
     <li key={i} className={styles.Li}>
-      <History method={histItem.method} url={histItem.url} />
+      <HistoryItem method={histItem.method} url={histItem.url} />
     </li>
   ));
 
