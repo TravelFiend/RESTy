@@ -1,0 +1,27 @@
+.URLRadios {
+  display: flex;
+
+  div {
+    label {
+      padding: 4px 23px;
+    }
+
+    label:hover {
+      background: rgb(220, 220, 220);
+    }
+  }
+
+  span {
+    background: none;
+  }
+}
+
+.URL {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 2px;
+}
+
+.Radios {
+    display: none;
+}

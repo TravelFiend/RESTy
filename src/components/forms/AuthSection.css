@@ -1,0 +1,21 @@
+.Auth {
+  background: none;
+  padding: 3px 0 2px 15px;
+  width: 99%;
+
+  p {
+    font-weight: bold;
+    color: black;
+    margin: 5px 0 7px 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+}
+
+.Stretch {
+  width: 100%;
+}
+
+.Bottom {
+  display: flex;
+  margin-top: 15px;
+}
